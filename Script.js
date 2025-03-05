@@ -1,4 +1,4 @@
-function verifyMessage () {
+function ToVerifyaMessage () {
     let input = prompt('Input a message');
 
     if (input.indexOf('FR') !==  -1) {
