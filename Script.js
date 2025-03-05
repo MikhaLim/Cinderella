@@ -1,15 +1,15 @@
-function ToVerifyaMessage () {
-    let input = prompt('Input a message');
+function checkMessage() {
+    let message = prompt("Enter a message:");
 
-    if (input.indexOf('FR') !==  -1) {
-        document.getElementById('result').innerHTML = 'The message "' + input + '" is legitimate!';
-    } else if (input.indexOf('FR') !==  -1 && input.indexOf('AI') !==  -1) {
-        document.getElementById('result').innerHTML = 'The message "' + input + '" is legitimate!';
-    } else if (input.indexOf('AI') !== -1) {
-        document.getElementById('result').innerHTML = 'The message "' + input + '" is fake!';
-    } else if (input.indexOf('aI') !==  -1 || input.indexOf('Ai') !==  -1) {
-        document.getElementById('result').innerHTML = 'The message "' + input + '" is fake!';
+    if (message.includes("FR") && message.includes("AI")) {
+        document.getElementById("output").innerHTML = `The message "${message}" is legitimate!`;
+    } else if (message.includes("FR")) {
+        document.getElementById("output").innerHTML = `The message "${message}" is legitimate!`;
+    } else if (message.includes("AI")) {
+        document.getElementById("output").innerHTML = `The message "${message}" is tampered with!`;
+    } else if (message.includes("aI") || message.includes("Ai")) {
+        document.getElementById("output").innerHTML = `The message "${message}" is tampered with!`;
     } else {
-        document.getElementById('result').innerHTML = 'The message "' + input + '" is not yet encoded!';
+        document.getElementById("output").innerHTML = `The message "${message}" is not yet encoded!`;
     }
 }
